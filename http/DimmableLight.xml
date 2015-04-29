@@ -3,7 +3,7 @@
 <device>
 <deviceType>urn:schemas-upnp-org:device:DimmableLight:1</deviceType>
 <presentationURL>/</presentationURL>
-<friendlyName>Ovoi RGB controller</friendlyName>
+<friendlyName>OVOI RGB controller</friendlyName>
 <manufacturer>ovoi.ru</manufacturer>
 <manufacturerURL>http://ovoi.ru/</manufacturerURL>
 <serialNumber>"10275488"</serialNumber>
