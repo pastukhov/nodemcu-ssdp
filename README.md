@@ -2,6 +2,7 @@
 
 # Installation
 
+* You should use latest firmware from [nodemcu-firmware](https://github.com/nodemcu/nodemcu-firmware) with multicsat support
 * Place these files on top of [NodeMCU-httpserver](https://github.com/marcoskirsch/nodemcu-httpserver).
 * Add upnp.lua and http/rgb.lua to list of files to compile.
 * Add dofile("upnp.lc") after dofile("httpserver.lc")(80).
