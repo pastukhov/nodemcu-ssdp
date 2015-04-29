@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<root xmlns='urn:schemas-upnp-org:device-1-0'>
+<device>
+<deviceType>urn:schemas-upnp-org:device:DimmableLight:1</deviceType>
+<presentationURL>/</presentationURL>
+<friendlyName>Ovoi RGB controller</friendlyName>
+<manufacturer>ovoi.ru</manufacturer>
+<manufacturerURL>http://ovoi.ru/</manufacturerURL>
+<serialNumber>"10275488"</serialNumber>
+<UDN>uuid:c5baf4a1-0c8e-44da-9714-ef10275488</UDN>
+</device></root>

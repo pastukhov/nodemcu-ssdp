@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    function hexToRgb(hex) {
+	var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	return result ? {
+    	    r: parseInt(result[1], 16),
+    	    g: parseInt(result[2], 16),
+    	    b: parseInt(result[3], 16)
+	} : null;
+    }
+      function sendRGB(color)
+      {
+	var r = Math.round(color.r*4)
+	var g = Math.round(color.g*4)
+	var b = Math.round(color.b*4)
+	var url = ""
+	url = url.concat('/rgb.lc?r=',r,'&g=',g,'&b=',b);
+	console.log(url);
+	xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = processRequest;
+        xmlHttp.open("GET", url, true);
+        xmlHttp.send( null );
+//	console.log(color)
+      }
+
+
+
+      function processRequest()
+      {
+         if(xmlHttp.readyState == 0)
+         {
+            console.log('Initalizing...');
+         }
+         else if(xmlHttp.readyState == 1)
+         {
+            console.log('Server connection established.');
+         }
+         else if(xmlHttp.readyState == 2)
+         {
+            console.log('Request received.');
+         }
+         else if(xmlHttp.readyState == 3)
+         {
+            console.log('Processing request.');
+         }
+         else if(xmlHttp.readyState == 4)
+         {
+            if(xmlHttp.status == 200)
+            {
+               console.log(xmlHttp.responseText);
+            }
+            else if(xmlHttp.status == 400)
+            {
+               console.log('Bad request.');
+            }
+         }
+      }
+
+
+
+</script>
+  <title>Ovoi RGB controller</title>
+</head>
+<body>
+  <label for="color">Choose a color:</label>
+  <input id="color" type="color" name="favcolor" value="#ff0000" onchange="sendRGB(hexToRgb(value))"/>
+
+
+</body>
